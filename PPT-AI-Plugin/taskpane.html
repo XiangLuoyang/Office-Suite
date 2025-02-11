@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>PPT AI 插件</title>
+    <link rel="stylesheet" type="text/css" href=".././taskpane.css" />
+</head>
+
+<body>
+    <div id="container">
+        <h1>PPT AI 插件</h1>
+    <div id="input-area">
+        <label for="ai-service-select">选择AI服务:</label>
+        <select id="ai-service-select">
+            <option value="azure-openai">Azure OpenAI Service</option>
+            <option value="openai-api">OpenAI API</option>
+            <option value="custom">Custom API</option>
+        </select>
+        <div id="azure-openai-config" style="display:none;">
+            <input type="text" id="azure-openai-api-key" placeholder="请输入Azure OpenAI API Key">
+            <input type="text" id="azure-openai-endpoint" placeholder="请输入Azure OpenAI Endpoint">
+            <input type="text" id="azure-openai-deployment-name" placeholder="请输入Azure OpenAI Deployment Name">
+        </div>
+        <div id="openai-api-config" style="display:none;">
+            <input type="text" id="openai-api-key" placeholder="请输入OpenAI API Key">
+        </div>
+        <div id="custom-api-config" style="display:none;">
+            <input type="text" id="custom-api-url" placeholder="请输入API接口URL">
+            <input type="text" id="custom-api-key" placeholder="请输入API Key">
+        </div>
+        <textarea id="prompt-input" placeholder="请输入您的PPT页面要求"></textarea>
+        <button id="generate-button">生成PPT</button>
+    </div>
+        <div id="output-area">
+            <p id="output-text"></p>
+        </div>
+    </div>
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
+    <script src=".././taskpane.js" type="text/javascript"></script>
+</body>
+
+</html>
